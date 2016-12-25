@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<title>Firebase Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">	
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Login</a>
+		</div>
+	</nav>
+
+	<div class="row">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="password" type="password" class="validate">
+					<label for="password">Password</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<button id="login-btn" class="waves-effect waves-light btn">Login</button>
+					<button id="open-register-modal-btn" class="waves-effect waves-light btn">register</button>
+				</div>
+			</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="register-modal" class="modal">
+		<div class="modal-content">
+			<h4>Register an account</h4>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="register-email" type="email" class="validate">
+					<label for="register-email">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="register-password" type="password" class="validate">
+					<label for="register-password">Password</label>
+				</div>
+			</div>
+
+			<div class="progress" id="register-progress">
+				<div class="indeterminate"></div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="register-close-btn" class=" modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+			<a href="#!" id="register-btn" class=" modal-action waves-effect waves-green btn-flat">Register</a>
+		</div>
+	</div>
+
+	<!-- warning modal Structure -->
+	<div id="warning-modal" class="modal">
+		<div class="modal-content">
+			<h4>Warning!</h4>
+			<h5 class="valign" id="warning-message-content"></h5>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="warning-close-btn" class=" modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+		</div>
+	</div>
+
+	<!-- success modal Structure -->
+	<div id="success-modal" class="modal">
+		<div class="modal-content">
+			<h4>Success!</h4>
+			<h5 class="valign" id="success-message-content"></h5>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="success-close-btn" class=" modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+		</div>
+	</div>
+
+<script language="javascript" type="application/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script language="javascript" type="application/javascript" src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script language="javascript" type="application/javascript" src="js/firebase-init.js"></script>
+<script language="javascript" type="application/javascript" src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
+	<title>Firebase Demo</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+	<link rel="stylesheet" href="css/main.css">	
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">Contact Overview</a>
+		</div>
+	</nav>
+	<div class="row">
+		<div class="col s12">
+			<div class="input-field inline">
+				<button class="btn waves-effect waves-light" type="button" id="open-add-user-modal" name="action">Add User<i class="material-icons left">library_add</i></button>				
+				<button class="btn waves-effect waves-light" type="button" id="logout-btn" name="action">Logout<i class="material-icons left">input</i></button>
+			</div>
+		</div>
+    </div>
+	<table class="highlight responsive-table">
+        <thead>
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Sex</th>
+              <th>Mobile Phone</th>
+              <th>Company</th>
+              <th>Address</th>
+              <th>Edit</th>
+          </tr>
+        </thead>
+
+		<tbody id="table-content">
+			<tr>
+				<td colspan="7" class="loading-list">loading...</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Modal Structure -->
+	<div id="warning-modal" class="modal">
+		<div class="modal-content">
+			<h4>Warning!</h4>
+			<h5 class="valign" id="warning-message-content"></h5>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="warning-close-btn" class=" modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+		</div>
+	</div>
+
+	<!-- logout modal Structure -->
+	<div id="logout-modal" class="modal">
+		<div class="modal-content">
+			<h4>Warning!</h4>
+			<h5 class="valign" id="logout-message-content"></h5>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="logout-close-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+		</div>
+	</div>
+
+	<!-- add user modal Structure -->
+	<div id="add-user-modal" class="modal">
+		<div class="modal-content">
+			<h4><span id="change-save-edit-title-modal"></span> User</h4>
+
+			<div class="row">
+				<div class="row">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">account_circle</i>
+						<input id="name" type="text" class="validate">
+						<label for="name">Name</label>
+					</div>
+					<div class="input-field col s6">
+						<input name="sex" type="radio" id="male" value="Male" />
+      					<label for="male">Male</label>
+      					<input name="sex" type="radio" id="female" value="Female" />
+      					<label for="female">Female</label>
+      					<input name="sex" type="radio" id="lesbian" value="Lesbian" />
+      					<label for="lesbian">Lesbian</label>
+      					<input name="sex" type="radio" id="gay" value="Gay" />
+      					<label for="gay">Gay</label>
+      					<input name="sex" type="radio" id="transsexual" value="Transsexual" />
+      					<label for="transsexual">Transsexual</label>
+      					<input name="sex" type="radio" id="biosexual" value="Biosexual" />
+      					<label for="biosexual">Biosexual</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+						<i class="material-icons prefix">phone</i>
+						<input id="mobile-phone" type="tel" class="validate">
+						<label for="mobile-phone">Telephone</label>
+					</div>
+					<div class="input-field col s6">
+						<i class="material-icons prefix">business</i>
+						<input id="company" type="text" class="validate">
+						<label for="company">Company</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix">location_on</i>
+						<input id="address" type="text" class="validate">
+						<label for="address">Address</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" id="add-user-close-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Clsoe</a>
+			<a href="#!" id="add-user-btn" class="modal-action waves-effect waves-green btn-flat">Add</a>
+			<a href="#!" id="save-user-btn" class="modal-action waves-effect waves-green btn-flat add-edit-btn-hidden">Save</a>
+		</div>
+	</div>
+
+<script language="javascript" type="application/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script language="javascript" type="application/javascript" src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script language="javascript" type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script language="javascript" type="application/javascript" src="js/firebase-init.js"></script>
+<script language="javascript" type="application/javascript" src="js/contact.js"></script>
+</body>
+</html>
